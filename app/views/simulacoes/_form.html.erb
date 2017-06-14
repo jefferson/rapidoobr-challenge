@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= f.label :faturamento %>
-    <%= f.number_field :faturamento, min: 0, required: true, class: "form-control" %>
+    <%= f.number_field :faturamento, min: 0, step: "any", required: true, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :valor_do_titulo %>
-    <%= f.number_field :valor_do_titulo, min: 500, required: true, class: "form-control" %>
+    <%= f.number_field :valor_do_titulo, min: 500, step: "any", required: true, class: "form-control" %>
   </div>
 
   <div class="field">

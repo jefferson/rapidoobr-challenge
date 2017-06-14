@@ -1,4 +1,5 @@
 class SimulacoesController < ApplicationController
+  
   before_action :set_simulacao, only: [:show, :edit, :update, :destroy]
 
   # GET /simulacoes
@@ -21,6 +22,7 @@ class SimulacoesController < ApplicationController
   # POST /simulacoes
   # POST /simulacoes.json
   def create
+    
     @simulacao = Simulacao.new(simulacao_params)
 
     respond_to do |format|
@@ -31,6 +33,7 @@ class SimulacoesController < ApplicationController
         format.html { render :new }
         format.json { render json: @simulacao.errors, status: :unprocessable_entity }
       end
+      
     end
   end
 
