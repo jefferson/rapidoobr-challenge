@@ -1,0 +1,29 @@
+pt-BR:
+  activerecord:
+    attributes: &coomon_attributes
+       created_at: Criado em
+       updated_at: Atualizado em
+    models:
+      simulacao:
+        one: Simulação
+        other: Simulações
+    attributes:
+      simulacao:
+        <<: *coomon_attributes
+        prazo_ate_atendimento: Prazo até o atendimento
+        valor_do_titulo: Valor do título
+        email: E-mail
+    errors:
+      models:
+        usuario:
+          attributes:
+            password:
+              blank: "Por favor informe uma senha"
+              confirmation: "As senhas informadas não são as mesmas"
+            password_confirmation:
+              blank: "Informa uma senha de confirmação"
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes

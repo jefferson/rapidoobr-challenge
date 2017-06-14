@@ -1,0 +1,49 @@
+<%= form_for(simulacao, remote: true) do |f| %>
+<h3>Rápido! <small> Quer saber qual a sua taxa utilizando a nossa plataforma? Utilize o nosso simulador e descubra.</small></h3>
+  <% if simulacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(simulacao.errors.count, "error") %> prohibited this simulacao from being saved:</h2>
+      <ul>
+      <% simulacao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome, required: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome_da_empresa %>
+    <%= f.text_field :nome_da_empresa, required: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :faturamento %>
+    <%= f.number_field :faturamento, min: 0, required: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valor_do_titulo %>
+    <%= f.number_field :valor_do_titulo, min: 500, required: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prazo_ate_atendimento %>
+    <%= f.number_field :prazo_ate_atendimento, placeholder: "Informe o prazo até o atendimento em número de dias", required: true, step: 1, min: 10, class: "form-control" %>
+  </div>
+
+  <div class="actions" style="margin-top: 20px">
+    <%= button_tag( type: "button", id: "enviar", :class => "btn btn-success") do %>
+      <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> Pronto, quero simular!
+    <% end %>
+  </div>
+<% end %>

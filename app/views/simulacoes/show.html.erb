@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @simulacao.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @simulacao.email %>
+</p>
+
+<p>
+  <strong>Nome da empresa:</strong>
+  <%= @simulacao.nome_da_empresa %>
+</p>
+
+<p>
+  <strong>Faturamento:</strong>
+  <%= @simulacao.faturamento %>
+</p>
+
+<p>
+  <strong>Valor do titulo:</strong>
+  <%= @simulacao.valor_do_titulo %>
+</p>
+
+<p>
+  <strong>Prazo ate atendimento:</strong>
+  <%= @simulacao.prazo_ate_atendimento %>
+</p>
+
+<%= link_to 'Edit', edit_simulacao_path(@simulacao) %> |
+<%= link_to 'Back', simulacoes_path %>
